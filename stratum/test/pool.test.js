@@ -568,7 +568,7 @@ describe('Test pool functionality', () => {
         response.push([type, text]);
         if (response.length === 2) {
           expect(response[0][0]).toBe('special');
-          expect(response[0][1]).toBe('Submitted a primary block (Bitcoin:1) successfully to Bitcoin\'s daemon instance(s)');
+          expect(response[0][1]).toBe('Submitted a primary block (radiant:1) successfully to radiant\'s daemon instance(s)');
           expect(response[1][0]).toBe('error');
           expect(response[1][1]).toBe('The block was rejected by the network');
           done();
@@ -650,7 +650,7 @@ describe('Test pool functionality', () => {
     pool.on('pool.log', (type, text) => {
       if (type !== 'debug') {
         expect(type).toBe('special');
-        expect(text).toBe('Submitted a primary block (Bitcoin:1) successfully to Bitcoin\'s daemon instance(s)');
+        expect(text).toBe('Submitted a primary block (Radiant:1) successfully to Radiant\'s daemon instance(s)');
         done();
       }
     });
