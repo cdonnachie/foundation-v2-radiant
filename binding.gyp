@@ -4,7 +4,9 @@
             "target_name": "hashing",
             "sources": [
                 "hashing.cc",
-                "algorithms/sha256d.c",
+                "algorithms/sha512256d/sha512256d.c",
+                "algorithms/sha256d/sha256d.c",
+                "algorithms/utils/sph_sha2big.c",
                 "algorithms/utils/sph_sha2.c",
             ],
             "include_dirs": [
